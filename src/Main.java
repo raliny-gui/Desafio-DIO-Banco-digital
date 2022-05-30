@@ -8,12 +8,13 @@ public class Main {
         cli[3] = new Cliente("Rogerio");
         cli[4] = new Cliente("Edilene");
 
-        Conta cc = new ContaCorrente(cli[1]);
-        Conta cp = new ContaPoupanca(cli[2]);
+        Conta cc =  ContaCorrente.getInstance(cli[1]) ;
+
+        Conta cp =  ContaPoupanca.getInstance(cli[2]);
 
         cc.depositar(350);
-        cc.transferir(100, cp);
+       // cc.transferir(100, cp);
         cc.extratoCC();
-        cp.extratoCP();
+        //cp.extratoCP();
     }
 }
